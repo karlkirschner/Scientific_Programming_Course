@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 '''
 An example for why using assert to test for expected condition is bad.
 
@@ -12,7 +11,7 @@ python -O assert_example.py -> assert is not read and program runs
 '''
 
 
-def simple_print(number_1: float=None, number_2: float=None) -> float:
+def simple_print(number_1: float, number_2: float) -> float:
 
     assert number_1 != None, "Error: you did not provide a numerator"
     assert number_2 != None, "Error: you did not provide a denominator"
@@ -21,4 +20,4 @@ def simple_print(number_1: float=None, number_2: float=None) -> float:
     print(number_1, number_2)
 
 
-simple_print(number_2=0.0)
+simple_print(number_1=None, number_2=0.0)
